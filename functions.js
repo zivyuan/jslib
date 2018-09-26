@@ -7,7 +7,7 @@ function parseQuery(paramstr) {
   param = {}
 
   if (urlStr && urlStr != '') {
-    var urlArr = urlStr.split("&")
+    var urlArr = urlStr.indexOf(';') > -1 ? urlStr.split(';') : urlStr.split("&")
 
     for (var i = 0; i < urlArr.length; i++) {
       var tempArr = urlArr[i].split("="),
